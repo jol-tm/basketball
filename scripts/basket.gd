@@ -13,6 +13,16 @@ func change_position() -> void:
 	
 	tween.tween_property(self, "global_position", Vector2(x, y), 2)
 
+func shake(force: int) -> void:
+	var tween : Tween = create_tween().set_trans(Tween.TRANS_CUBIC)
+	force /= 100
+	print(force)
+	
+	for i in range(force):
+		tween.tween_property(self, "rotation_degrees", 5, 0.05)
+		tween.tween_property(self, "rotation_degrees", -5, 0.05)
+	tween.tween_property(self, "rotation_degrees", 0, 0.05)
+
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.name == "Basketball" and body.linear_velocity.y > 0:
 		change_position()
