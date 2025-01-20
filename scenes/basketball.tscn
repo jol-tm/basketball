@@ -1,0 +1,76 @@
+[gd_scene load_steps=11 format=3 uid="uid://c4gxnmcvk1a87"]
+
+[ext_resource type="Script" path="res://scripts/basketball.gd" id="1_7erph"]
+[ext_resource type="Texture2D" uid="uid://cote853kvgoo7" path="res://sprites/basketball.png" id="1_jhbaj"]
+[ext_resource type="AudioStream" uid="uid://c7104dsfsa4ov" path="res://sfx/poft.wav" id="3_pqt2r"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ombmt"]
+bounce = 0.8
+
+[sub_resource type="Curve" id="Curve_luak0"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_ef6xc"]
+colors = PackedColorArray(1, 1, 0, 0.996078, 1, 0.192157, 0, 1)
+
+[sub_resource type="Curve" id="Curve_bn2vn"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_py3lo"]
+offsets = PackedFloat32Array(0, 0.633929)
+colors = PackedColorArray(1, 0.439216, 0, 1, 1, 1, 1, 0)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qhea0"]
+radius = 8.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_uds0o"]
+radius = 8.5
+
+[node name="Basketball" type="RigidBody2D"]
+mass = 0.57
+physics_material_override = SubResource("PhysicsMaterial_ombmt")
+script = ExtResource("1_7erph")
+
+[node name="AimLine" type="Line2D" parent="."]
+points = PackedVector2Array(0, 0, 0, 0)
+width = 16.0
+width_curve = SubResource("Curve_luak0")
+default_color = Color(1, 0.443137, 0, 1)
+gradient = SubResource("Gradient_ef6xc")
+
+[node name="Trail" type="Line2D" parent="."]
+top_level = true
+width = 16.0
+width_curve = SubResource("Curve_bn2vn")
+default_color = Color(1, 0.439216, 0, 1)
+gradient = SubResource("Gradient_py3lo")
+
+[node name="ShadowPivot" type="Node2D" parent="."]
+top_level = true
+position = Vector2(0, 186)
+
+[node name="Shadow" type="Sprite2D" parent="ShadowPivot"]
+modulate = Color(0, 0, 0, 1)
+texture_filter = 1
+scale = Vector2(1, 0.4)
+texture = ExtResource("1_jhbaj")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 1
+texture_filter = 1
+texture = ExtResource("1_jhbaj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_qhea0")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_uds0o")
+
+[node name="CollisionSfx" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_pqt2r")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

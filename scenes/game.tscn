@@ -1,0 +1,59 @@
+[gd_scene load_steps=7 format=3 uid="uid://d6iuxhne1q1y"]
+
+[ext_resource type="PackedScene" uid="uid://c4gxnmcvk1a87" path="res://scenes/basketball.tscn" id="1_q62fu"]
+[ext_resource type="FontFile" uid="uid://divsb588k7fja" path="res://font/basis33.ttf" id="3_bny33"]
+[ext_resource type="PackedScene" uid="uid://d1s6mv2crrcbg" path="res://scenes/basket.tscn" id="4_eq5h8"]
+[ext_resource type="Script" path="res://scripts/camera_2d.gd" id="4_qldi7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m3qxx"]
+size = Vector2(425, 52.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ydniu"]
+size = Vector2(52.5, 649.125)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Edges" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Edges"]
+position = Vector2(213, -409.5)
+shape = SubResource("RectangleShape2D_m3qxx")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Edges"]
+position = Vector2(213, 213.75)
+shape = SubResource("RectangleShape2D_m3qxx")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Edges"]
+position = Vector2(-26, -110.5)
+shape = SubResource("RectangleShape2D_ydniu")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Edges"]
+position = Vector2(452.2, -110.438)
+shape = SubResource("RectangleShape2D_ydniu")
+
+[node name="Basketball" parent="." instance=ExtResource("1_q62fu")]
+position = Vector2(201, 93)
+
+[node name="Basket" parent="." instance=ExtResource("4_eq5h8")]
+position = Vector2(201, 57)
+
+[node name="Force" type="Label" parent="."]
+texture_filter = 1
+offset_right = 1.0
+offset_bottom = 13.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_bny33")
+theme_override_font_sizes/font_size = 16
+
+[node name="Angle" type="Label" parent="."]
+texture_filter = 1
+offset_right = 1.0
+offset_bottom = 13.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_bny33")
+theme_override_font_sizes/font_size = 16
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(213, 120)
+position_smoothing_enabled = true
+script = ExtResource("4_qldi7")

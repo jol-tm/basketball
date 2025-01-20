@@ -1,0 +1,357 @@
+[gd_scene load_steps=6 format=3 uid="uid://d1s6mv2crrcbg"]
+
+[ext_resource type="Script" path="res://scripts/basket.gd" id="1_yl00a"]
+[ext_resource type="AudioStream" uid="uid://ceh81v8s6k7g8" path="res://sfx/score.wav" id="2_83fu0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dmeff"]
+size = Vector2(3.5, 3)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vu7yg"]
+size = Vector2(12, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mlwnm"]
+size = Vector2(3, 3)
+
+[node name="Basket" type="StaticBody2D"]
+z_index = 1
+script = ExtResource("1_yl00a")
+
+[node name="Net" type="Node2D" parent="."]
+position = Vector2(-15, 0)
+
+[node name="Left" type="Node2D" parent="Net"]
+
+[node name="PinJoint2D" type="PinJoint2D" parent="Net/Left"]
+position = Vector2(2, 0)
+scale = Vector2(0.11, 0.11)
+node_a = NodePath("../../..")
+node_b = NodePath("../Net Segment")
+bias = 0.7
+softness = 1.0
+
+[node name="Net Segment" type="RigidBody2D" parent="Net/Left"]
+mass = 0.5
+
+[node name="Line2D" type="Line2D" parent="Net/Left/Net Segment"]
+position = Vector2(1, 0)
+points = PackedVector2Array(1, 0, 1, 3)
+width = 1.0
+default_color = Color(0.529067, 0.529067, 0.529067, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Net/Left/Net Segment"]
+position = Vector2(2, 1.485)
+shape = SubResource("RectangleShape2D_dmeff")
+
+[node name="PinJoint2D" type="PinJoint2D" parent="Net/Left/Net Segment"]
+position = Vector2(2, 3)
+scale = Vector2(0.11, 0.11)
+node_a = NodePath("..")
+node_b = NodePath("../../Net Segment2")
+bias = 0.7
+softness = 1.0
+
+[node name="Net Segment2" type="RigidBody2D" parent="Net/Left"]
+position = Vector2(0, 2.5)
+mass = 0.5
+
+[node name="Line2D" type="Line2D" parent="Net/Left/Net Segment2"]
+position = Vector2(1, 0)
+points = PackedVector2Array(1, 0, 1, 3)
+width = 1.0
+default_color = Color(0.529067, 0.529067, 0.529067, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Net/Left/Net Segment2"]
+position = Vector2(2, 1.5)
+shape = SubResource("RectangleShape2D_dmeff")
+
+[node name="PinJoint2D" type="PinJoint2D" parent="Net/Left/Net Segment2"]
+position = Vector2(2, 3)
+scale = Vector2(0.11, 0.11)
+node_a = NodePath("..")
+node_b = NodePath("../../Net Segment3")
+bias = 0.7
+softness = 1.0
+
+[node name="Net Segment3" type="RigidBody2D" parent="Net/Left"]
+position = Vector2(0, 5.5)
+mass = 0.5
+
+[node name="Line2D" type="Line2D" parent="Net/Left/Net Segment3"]
+position = Vector2(1, 0)
+points = PackedVector2Array(1, 0, 1, 3)
+width = 1.0
+default_color = Color(0.529067, 0.529067, 0.529067, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Net/Left/Net Segment3"]
+position = Vector2(2, 1.5)
+shape = SubResource("RectangleShape2D_dmeff")
+
+[node name="PinJoint2D" type="PinJoint2D" parent="Net/Left/Net Segment3"]
+position = Vector2(2, 3)
+scale = Vector2(0.11, 0.11)
+node_a = NodePath("..")
+node_b = NodePath("../../Net Segment4")
+bias = 0.7
+softness = 1.0
+
+[node name="Net Segment4" type="RigidBody2D" parent="Net/Left"]
+position = Vector2(0, 8.5)
+mass = 0.5
+
+[node name="Line2D" type="Line2D" parent="Net/Left/Net Segment4"]
+position = Vector2(1, 0)
+points = PackedVector2Array(1, 0, 1, 3)
+width = 1.0
+default_color = Color(0.529067, 0.529067, 0.529067, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Net/Left/Net Segment4"]
+position = Vector2(2, 1.5)
+shape = SubResource("RectangleShape2D_dmeff")
+
+[node name="PinJoint2D" type="PinJoint2D" parent="Net/Left/Net Segment4"]
+position = Vector2(2, 3)
+scale = Vector2(0.11, 0.11)
+node_a = NodePath("..")
+node_b = NodePath("../../Net Segment5")
+bias = 0.7
+softness = 1.0
+
+[node name="Net Segment5" type="RigidBody2D" parent="Net/Left"]
+position = Vector2(0, 11.5)
+mass = 0.5
+
+[node name="Line2D" type="Line2D" parent="Net/Left/Net Segment5"]
+position = Vector2(1, 0)
+points = PackedVector2Array(1, 0, 1, 3)
+width = 1.0
+default_color = Color(0.529067, 0.529067, 0.529067, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Net/Left/Net Segment5"]
+position = Vector2(2, 1.5)
+shape = SubResource("RectangleShape2D_dmeff")
+
+[node name="PinJoint2D" type="PinJoint2D" parent="Net/Left/Net Segment5"]
+position = Vector2(2, 3)
+scale = Vector2(0.11, 0.11)
+node_a = NodePath("..")
+node_b = NodePath("../../Net Segment6")
+bias = 0.7
+softness = 1.0
+
+[node name="Net Segment6" type="RigidBody2D" parent="Net/Left"]
+position = Vector2(0, 14.5)
+mass = 0.5
+
+[node name="Line2D" type="Line2D" parent="Net/Left/Net Segment6"]
+position = Vector2(1, 0)
+points = PackedVector2Array(1, 0, 1, 3)
+width = 1.0
+default_color = Color(0.529067, 0.529067, 0.529067, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Net/Left/Net Segment6"]
+position = Vector2(2, 1.5)
+shape = SubResource("RectangleShape2D_dmeff")
+
+[node name="PinJoint2D" type="PinJoint2D" parent="Net/Left/Net Segment6"]
+position = Vector2(2, 3)
+scale = Vector2(0.11, 0.11)
+node_a = NodePath("..")
+node_b = NodePath("../../Net Segment7")
+bias = 0.7
+softness = 1.0
+
+[node name="Net Segment7" type="RigidBody2D" parent="Net/Left"]
+position = Vector2(0, 17.5)
+mass = 0.5
+
+[node name="Line2D" type="Line2D" parent="Net/Left/Net Segment7"]
+position = Vector2(1, 0)
+points = PackedVector2Array(1, 0, 1, 3)
+width = 1.0
+default_color = Color(0.529067, 0.529067, 0.529067, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Net/Left/Net Segment7"]
+position = Vector2(2, 1.5)
+shape = SubResource("RectangleShape2D_dmeff")
+
+[node name="Right" type="Node2D" parent="Net"]
+position = Vector2(26.5, 0)
+
+[node name="PinJoint2D" type="PinJoint2D" parent="Net/Right"]
+position = Vector2(2, 0)
+scale = Vector2(0.11, 0.11)
+node_a = NodePath("../../..")
+node_b = NodePath("../Net Segment")
+bias = 0.7
+softness = 1.0
+
+[node name="Net Segment" type="RigidBody2D" parent="Net/Right"]
+mass = 0.5
+
+[node name="Line2D" type="Line2D" parent="Net/Right/Net Segment"]
+position = Vector2(1, 0)
+points = PackedVector2Array(1, 0, 1, 3)
+width = 1.0
+default_color = Color(0.529067, 0.529067, 0.529067, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Net/Right/Net Segment"]
+position = Vector2(2, 1.485)
+shape = SubResource("RectangleShape2D_dmeff")
+
+[node name="PinJoint2D" type="PinJoint2D" parent="Net/Right/Net Segment"]
+position = Vector2(2, 3)
+scale = Vector2(0.11, 0.11)
+node_a = NodePath("..")
+node_b = NodePath("../../Net Segment2")
+bias = 0.7
+softness = 1.0
+
+[node name="Net Segment2" type="RigidBody2D" parent="Net/Right"]
+position = Vector2(0, 2.5)
+mass = 0.5
+
+[node name="Line2D" type="Line2D" parent="Net/Right/Net Segment2"]
+position = Vector2(1, 0)
+points = PackedVector2Array(1, 0, 1, 3)
+width = 1.0
+default_color = Color(0.529067, 0.529067, 0.529067, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Net/Right/Net Segment2"]
+position = Vector2(2, 1.5)
+shape = SubResource("RectangleShape2D_dmeff")
+
+[node name="PinJoint2D" type="PinJoint2D" parent="Net/Right/Net Segment2"]
+position = Vector2(2, 3)
+scale = Vector2(0.11, 0.11)
+node_a = NodePath("..")
+node_b = NodePath("../../Net Segment3")
+bias = 0.7
+softness = 1.0
+
+[node name="Net Segment3" type="RigidBody2D" parent="Net/Right"]
+position = Vector2(0, 5.5)
+mass = 0.5
+
+[node name="Line2D" type="Line2D" parent="Net/Right/Net Segment3"]
+position = Vector2(1, 0)
+points = PackedVector2Array(1, 0, 1, 3)
+width = 1.0
+default_color = Color(0.529067, 0.529067, 0.529067, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Net/Right/Net Segment3"]
+position = Vector2(2, 1.5)
+shape = SubResource("RectangleShape2D_dmeff")
+
+[node name="PinJoint2D" type="PinJoint2D" parent="Net/Right/Net Segment3"]
+position = Vector2(2, 3)
+scale = Vector2(0.11, 0.11)
+node_a = NodePath("..")
+node_b = NodePath("../../Net Segment4")
+bias = 0.7
+softness = 1.0
+
+[node name="Net Segment4" type="RigidBody2D" parent="Net/Right"]
+position = Vector2(0, 8.5)
+mass = 0.5
+
+[node name="Line2D" type="Line2D" parent="Net/Right/Net Segment4"]
+position = Vector2(1, 0)
+points = PackedVector2Array(1, 0, 1, 3)
+width = 1.0
+default_color = Color(0.529067, 0.529067, 0.529067, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Net/Right/Net Segment4"]
+position = Vector2(2, 1.5)
+shape = SubResource("RectangleShape2D_dmeff")
+
+[node name="PinJoint2D" type="PinJoint2D" parent="Net/Right/Net Segment4"]
+position = Vector2(2, 3)
+scale = Vector2(0.11, 0.11)
+node_a = NodePath("..")
+node_b = NodePath("../../Net Segment5")
+bias = 0.7
+softness = 1.0
+
+[node name="Net Segment5" type="RigidBody2D" parent="Net/Right"]
+position = Vector2(0, 11.5)
+mass = 0.5
+
+[node name="Line2D" type="Line2D" parent="Net/Right/Net Segment5"]
+position = Vector2(1, 0)
+points = PackedVector2Array(1, 0, 1, 3)
+width = 1.0
+default_color = Color(0.529067, 0.529067, 0.529067, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Net/Right/Net Segment5"]
+position = Vector2(2, 1.5)
+shape = SubResource("RectangleShape2D_dmeff")
+
+[node name="PinJoint2D" type="PinJoint2D" parent="Net/Right/Net Segment5"]
+position = Vector2(2, 3)
+scale = Vector2(0.11, 0.11)
+node_a = NodePath("..")
+node_b = NodePath("../../Net Segment6")
+bias = 0.7
+softness = 1.0
+
+[node name="Net Segment6" type="RigidBody2D" parent="Net/Right"]
+position = Vector2(0, 14.5)
+mass = 0.5
+
+[node name="Line2D" type="Line2D" parent="Net/Right/Net Segment6"]
+position = Vector2(1, 0)
+points = PackedVector2Array(1, 0, 1, 3)
+width = 1.0
+default_color = Color(0.529067, 0.529067, 0.529067, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Net/Right/Net Segment6"]
+position = Vector2(2, 1.5)
+shape = SubResource("RectangleShape2D_dmeff")
+
+[node name="PinJoint2D" type="PinJoint2D" parent="Net/Right/Net Segment6"]
+position = Vector2(2, 3)
+scale = Vector2(0.11, 0.11)
+node_a = NodePath("..")
+node_b = NodePath("../../Net Segment7")
+bias = 0.7
+softness = 1.0
+
+[node name="Net Segment7" type="RigidBody2D" parent="Net/Right"]
+position = Vector2(0, 17.5)
+mass = 0.5
+
+[node name="Line2D" type="Line2D" parent="Net/Right/Net Segment7"]
+position = Vector2(1, 0)
+points = PackedVector2Array(1, 0, 1, 3)
+width = 1.0
+default_color = Color(0.529067, 0.529067, 0.529067, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Net/Right/Net Segment7"]
+position = Vector2(2, 1.5)
+shape = SubResource("RectangleShape2D_dmeff")
+
+[node name="Line2D" type="Line2D" parent="."]
+position = Vector2(-15, 0)
+points = PackedVector2Array(0, 0, 7.69055, 0, 30, 0)
+width = 3.0
+default_color = Color(1, 0.129412, 0.219608, 1)
+
+[node name="Area2D" type="Area2D" parent="Line2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Line2D/Area2D"]
+position = Vector2(15, 3.5)
+shape = SubResource("RectangleShape2D_vu7yg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-13.5, 0)
+shape = SubResource("RectangleShape2D_mlwnm")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(13.5, 0)
+shape = SubResource("RectangleShape2D_mlwnm")
+
+[node name="ScoreSfx" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_83fu0")
+
+[connection signal="body_entered" from="Line2D/Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Line2D/Area2D" to="." method="_on_area_2d_body_exited"]
