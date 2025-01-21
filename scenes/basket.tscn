@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://d1s6mv2crrcbg"]
+[gd_scene load_steps=7 format=3 uid="uid://d1s6mv2crrcbg"]
 
 [ext_resource type="Script" path="res://scripts/basket.gd" id="1_yl00a"]
 [ext_resource type="AudioStream" uid="uid://ceh81v8s6k7g8" path="res://sfx/score.wav" id="2_83fu0"]
+[ext_resource type="AudioStream" uid="uid://c80kkhytbpksr" path="res://sfx/rim.wav" id="3_o7c2e"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dmeff"]
 size = Vector2(3.5, 3)
@@ -23,7 +24,7 @@ position = Vector2(-15, 0)
 
 [node name="PinJoint2D" type="PinJoint2D" parent="Net/Left"]
 position = Vector2(2, 0)
-scale = Vector2(0.11, 0.11)
+scale = Vector2(0.1, 0.1)
 node_a = NodePath("../../..")
 node_b = NodePath("../Net Segment")
 bias = 0.7
@@ -44,7 +45,7 @@ shape = SubResource("RectangleShape2D_dmeff")
 
 [node name="PinJoint2D" type="PinJoint2D" parent="Net/Left/Net Segment"]
 position = Vector2(2, 3)
-scale = Vector2(0.11, 0.11)
+scale = Vector2(0.1, 0.1)
 node_a = NodePath("..")
 node_b = NodePath("../../Net Segment2")
 bias = 0.7
@@ -66,7 +67,7 @@ shape = SubResource("RectangleShape2D_dmeff")
 
 [node name="PinJoint2D" type="PinJoint2D" parent="Net/Left/Net Segment2"]
 position = Vector2(2, 3)
-scale = Vector2(0.11, 0.11)
+scale = Vector2(0.1, 0.1)
 node_a = NodePath("..")
 node_b = NodePath("../../Net Segment3")
 bias = 0.7
@@ -88,7 +89,7 @@ shape = SubResource("RectangleShape2D_dmeff")
 
 [node name="PinJoint2D" type="PinJoint2D" parent="Net/Left/Net Segment3"]
 position = Vector2(2, 3)
-scale = Vector2(0.11, 0.11)
+scale = Vector2(0.1, 0.1)
 node_a = NodePath("..")
 node_b = NodePath("../../Net Segment4")
 bias = 0.7
@@ -110,7 +111,7 @@ shape = SubResource("RectangleShape2D_dmeff")
 
 [node name="PinJoint2D" type="PinJoint2D" parent="Net/Left/Net Segment4"]
 position = Vector2(2, 3)
-scale = Vector2(0.11, 0.11)
+scale = Vector2(0.1, 0.1)
 node_a = NodePath("..")
 node_b = NodePath("../../Net Segment5")
 bias = 0.7
@@ -132,7 +133,7 @@ shape = SubResource("RectangleShape2D_dmeff")
 
 [node name="PinJoint2D" type="PinJoint2D" parent="Net/Left/Net Segment5"]
 position = Vector2(2, 3)
-scale = Vector2(0.11, 0.11)
+scale = Vector2(0.1, 0.1)
 node_a = NodePath("..")
 node_b = NodePath("../../Net Segment6")
 bias = 0.7
@@ -154,7 +155,7 @@ shape = SubResource("RectangleShape2D_dmeff")
 
 [node name="PinJoint2D" type="PinJoint2D" parent="Net/Left/Net Segment6"]
 position = Vector2(2, 3)
-scale = Vector2(0.11, 0.11)
+scale = Vector2(0.1, 0.1)
 node_a = NodePath("..")
 node_b = NodePath("../../Net Segment7")
 bias = 0.7
@@ -179,7 +180,7 @@ position = Vector2(26.5, 0)
 
 [node name="PinJoint2D" type="PinJoint2D" parent="Net/Right"]
 position = Vector2(2, 0)
-scale = Vector2(0.11, 0.11)
+scale = Vector2(0.1, 0.1)
 node_a = NodePath("../../..")
 node_b = NodePath("../Net Segment")
 bias = 0.7
@@ -222,7 +223,7 @@ shape = SubResource("RectangleShape2D_dmeff")
 
 [node name="PinJoint2D" type="PinJoint2D" parent="Net/Right/Net Segment2"]
 position = Vector2(2, 3)
-scale = Vector2(0.11, 0.11)
+scale = Vector2(0.1, 0.1)
 node_a = NodePath("..")
 node_b = NodePath("../../Net Segment3")
 bias = 0.7
@@ -244,7 +245,7 @@ shape = SubResource("RectangleShape2D_dmeff")
 
 [node name="PinJoint2D" type="PinJoint2D" parent="Net/Right/Net Segment3"]
 position = Vector2(2, 3)
-scale = Vector2(0.11, 0.11)
+scale = Vector2(0.1, 0.1)
 node_a = NodePath("..")
 node_b = NodePath("../../Net Segment4")
 bias = 0.7
@@ -266,7 +267,7 @@ shape = SubResource("RectangleShape2D_dmeff")
 
 [node name="PinJoint2D" type="PinJoint2D" parent="Net/Right/Net Segment4"]
 position = Vector2(2, 3)
-scale = Vector2(0.11, 0.11)
+scale = Vector2(0.1, 0.1)
 node_a = NodePath("..")
 node_b = NodePath("../../Net Segment5")
 bias = 0.7
@@ -288,7 +289,7 @@ shape = SubResource("RectangleShape2D_dmeff")
 
 [node name="PinJoint2D" type="PinJoint2D" parent="Net/Right/Net Segment5"]
 position = Vector2(2, 3)
-scale = Vector2(0.11, 0.11)
+scale = Vector2(0.1, 0.1)
 node_a = NodePath("..")
 node_b = NodePath("../../Net Segment6")
 bias = 0.7
@@ -310,7 +311,7 @@ shape = SubResource("RectangleShape2D_dmeff")
 
 [node name="PinJoint2D" type="PinJoint2D" parent="Net/Right/Net Segment6"]
 position = Vector2(2, 3)
-scale = Vector2(0.11, 0.11)
+scale = Vector2(0.1, 0.1)
 node_a = NodePath("..")
 node_b = NodePath("../../Net Segment7")
 bias = 0.7
@@ -352,6 +353,11 @@ shape = SubResource("RectangleShape2D_mlwnm")
 
 [node name="ScoreSfx" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("2_83fu0")
+volume_db = 5.0
+
+[node name="RimSfx" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_o7c2e")
+volume_db = -10.0
 
 [connection signal="body_entered" from="Line2D/Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Line2D/Area2D" to="." method="_on_area_2d_body_exited"]

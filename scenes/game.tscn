@@ -31,10 +31,10 @@ position = Vector2(452.2, 94)
 shape = SubResource("RectangleShape2D_ydniu")
 
 [node name="Basketball" parent="." instance=ExtResource("1_q62fu")]
-position = Vector2(201, 93)
+position = Vector2(207, 94)
 
 [node name="Basket" parent="." instance=ExtResource("4_eq5h8")]
-position = Vector2(201, 57)
+position = Vector2(207, 50)
 
 [node name="Force" type="Label" parent="."]
 texture_filter = 1
@@ -51,3 +51,13 @@ offset_bottom = 13.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_bny33")
 theme_override_font_sizes/font_size = 16
+
+[node name="Score" type="Label" parent="."]
+texture_filter = 1
+offset_left = 199.0
+offset_right = 227.0
+offset_bottom = 32.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_bny33")
+theme_override_font_sizes/font_size = 32
+text = "0"
