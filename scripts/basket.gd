@@ -18,7 +18,7 @@ func shake(force: int) -> void:
 	var tween : Tween = create_tween().set_trans(Tween.TRANS_CUBIC)
 	force /= 100
 	
-	for i in range(force):
+	for i : int in range(force):
 		tween.tween_property(self, "rotation_degrees", 5, 0.05)
 		tween.tween_property(self, "rotation_degrees", -5, 0.05)
 	tween.tween_property(self, "rotation_degrees", 0, 0.05)

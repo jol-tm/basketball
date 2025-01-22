@@ -68,6 +68,6 @@ func get_angle() -> int:
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.name == "Basket":
 		body.call("shake", int(linear_velocity.length()))
-	var vol = clamp(linear_velocity.length() - 120, -80, 0)
+	var vol : int = clamp(linear_velocity.length() - 120, -80, 0)
 	$CollisionSfx.volume_db = vol
 	$CollisionSfx.play()
