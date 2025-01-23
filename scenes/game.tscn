@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://d6iuxhne1q1y"]
+[gd_scene load_steps=7 format=3 uid="uid://d6iuxhne1q1y"]
 
 [ext_resource type="PackedScene" uid="uid://c4gxnmcvk1a87" path="res://scenes/basketball.tscn" id="1_q62fu"]
 [ext_resource type="FontFile" uid="uid://divsb588k7fja" path="res://font/basis33.ttf" id="3_bny33"]
@@ -9,6 +9,8 @@ size = Vector2(425.5, 52.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ydniu"]
 size = Vector2(52.5, 291.5)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uevoo"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -61,3 +63,37 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_bny33")
 theme_override_font_sizes/font_size = 32
 text = "0"
+
+[node name="Credits" type="Label" parent="."]
+texture_filter = 1
+offset_left = 252.0
+offset_top = 201.0
+offset_right = 420.0
+offset_bottom = 236.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_bny33")
+theme_override_font_sizes/font_size = 16
+text = "A game developed by JoL _UnderlineStudios"
+horizontal_alignment = 2
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="PlayBtn" type="Button" parent="."]
+texture_filter = 1
+offset_left = 173.0
+offset_top = 92.0
+offset_right = 209.0
+offset_bottom = 116.0
+scale = Vector2(2, 2)
+mouse_default_cursor_shape = 2
+theme_override_colors/font_hover_color = Color(1, 0.439216, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.439216, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_bny33")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/focus = SubResource("StyleBoxEmpty_uevoo")
+text = "Play"
+flat = true
+
+[connection signal="pressed" from="PlayBtn" to="Basketball" method="_on_play_btn_pressed"]
+[connection signal="pressed" from="PlayBtn" to="Basket" method="_on_play_btn_pressed"]

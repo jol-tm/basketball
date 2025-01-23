@@ -4,6 +4,7 @@ const SPEED : int = 300
 const MAX_IMPULSE : int = 20000
 const MAX_TRAIL_POINTS : int = 10
 var trail_points : Array = []
+var game_started : bool = false
 
 func _physics_process(_delta: float) -> void:
 	var mouse : Vector2 = get_global_mouse_position()
@@ -14,7 +15,7 @@ func _physics_process(_delta: float) -> void:
 	if impulse.length() > MAX_IMPULSE:
 		impulse = impulse.normalized() * MAX_IMPULSE
 	
-	if global_position.y > 100:
+	if global_position.y > 100 and game_started:
 		if Input.is_action_pressed("click"):
 			$AimLine.points[1] = to_local(mouse)
 			$"../Force".text = "Force: " + str(int(impulse.length() / (MAX_IMPULSE / 100.0))) + "%"
@@ -71,3 +72,10 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	var vol : int = clamp(linear_velocity.length() - 120, -80, 0)
 	$CollisionSfx.volume_db = vol
 	$CollisionSfx.play()
+
+func _on_play_btn_pressed() -> void:
+	$"../PlayBtn".modulate = 0 
+	$"../PlayBtn".disabled = true
+	$"../Credits".modulate = 0
+	await get_tree().create_timer(0.1).timeout
+	game_started = true

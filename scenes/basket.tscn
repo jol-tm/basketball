@@ -27,7 +27,7 @@ position = Vector2(2, 0)
 scale = Vector2(0.1, 0.1)
 node_a = NodePath("../../..")
 node_b = NodePath("../Net Segment")
-bias = 0.7
+bias = 0.9
 softness = 0.5
 
 [node name="Net Segment" type="RigidBody2D" parent="Net/Left"]
@@ -48,7 +48,7 @@ position = Vector2(2, 3)
 scale = Vector2(0.1, 0.1)
 node_a = NodePath("..")
 node_b = NodePath("../../Net Segment2")
-bias = 0.7
+bias = 0.9
 softness = 0.5
 
 [node name="Net Segment2" type="RigidBody2D" parent="Net/Left"]
@@ -70,7 +70,7 @@ position = Vector2(2, 3)
 scale = Vector2(0.1, 0.1)
 node_a = NodePath("..")
 node_b = NodePath("../../Net Segment3")
-bias = 0.7
+bias = 0.9
 softness = 0.5
 
 [node name="Net Segment3" type="RigidBody2D" parent="Net/Left"]
@@ -92,7 +92,7 @@ position = Vector2(2, 3)
 scale = Vector2(0.1, 0.1)
 node_a = NodePath("..")
 node_b = NodePath("../../Net Segment4")
-bias = 0.7
+bias = 0.9
 softness = 0.5
 
 [node name="Net Segment4" type="RigidBody2D" parent="Net/Left"]
@@ -114,7 +114,7 @@ position = Vector2(2, 3)
 scale = Vector2(0.1, 0.1)
 node_a = NodePath("..")
 node_b = NodePath("../../Net Segment5")
-bias = 0.7
+bias = 0.9
 softness = 0.5
 
 [node name="Net Segment5" type="RigidBody2D" parent="Net/Left"]
@@ -136,7 +136,7 @@ position = Vector2(2, 3)
 scale = Vector2(0.1, 0.1)
 node_a = NodePath("..")
 node_b = NodePath("../../Net Segment6")
-bias = 0.7
+bias = 0.9
 softness = 0.5
 
 [node name="Net Segment6" type="RigidBody2D" parent="Net/Left"]
@@ -158,7 +158,7 @@ position = Vector2(2, 3)
 scale = Vector2(0.1, 0.1)
 node_a = NodePath("..")
 node_b = NodePath("../../Net Segment7")
-bias = 0.7
+bias = 0.9
 softness = 0.5
 
 [node name="Net Segment7" type="RigidBody2D" parent="Net/Left"]
@@ -183,7 +183,7 @@ position = Vector2(2, 0)
 scale = Vector2(0.1, 0.1)
 node_a = NodePath("../../..")
 node_b = NodePath("../Net Segment")
-bias = 0.7
+bias = 0.9
 softness = 0.5
 
 [node name="Net Segment" type="RigidBody2D" parent="Net/Right"]
@@ -204,7 +204,7 @@ position = Vector2(2, 3)
 scale = Vector2(0.11, 0.11)
 node_a = NodePath("..")
 node_b = NodePath("../../Net Segment2")
-bias = 0.7
+bias = 0.9
 softness = 1.0
 
 [node name="Net Segment2" type="RigidBody2D" parent="Net/Right"]
@@ -226,7 +226,7 @@ position = Vector2(2, 3)
 scale = Vector2(0.1, 0.1)
 node_a = NodePath("..")
 node_b = NodePath("../../Net Segment3")
-bias = 0.7
+bias = 0.9
 softness = 0.5
 
 [node name="Net Segment3" type="RigidBody2D" parent="Net/Right"]
@@ -248,7 +248,7 @@ position = Vector2(2, 3)
 scale = Vector2(0.1, 0.1)
 node_a = NodePath("..")
 node_b = NodePath("../../Net Segment4")
-bias = 0.7
+bias = 0.9
 softness = 0.5
 
 [node name="Net Segment4" type="RigidBody2D" parent="Net/Right"]
@@ -270,7 +270,7 @@ position = Vector2(2, 3)
 scale = Vector2(0.1, 0.1)
 node_a = NodePath("..")
 node_b = NodePath("../../Net Segment5")
-bias = 0.7
+bias = 0.9
 softness = 0.5
 
 [node name="Net Segment5" type="RigidBody2D" parent="Net/Right"]
@@ -292,7 +292,7 @@ position = Vector2(2, 3)
 scale = Vector2(0.1, 0.1)
 node_a = NodePath("..")
 node_b = NodePath("../../Net Segment6")
-bias = 0.7
+bias = 0.9
 softness = 0.5
 
 [node name="Net Segment6" type="RigidBody2D" parent="Net/Right"]
@@ -314,7 +314,7 @@ position = Vector2(2, 3)
 scale = Vector2(0.1, 0.1)
 node_a = NodePath("..")
 node_b = NodePath("../../Net Segment7")
-bias = 0.7
+bias = 0.9
 softness = 0.5
 
 [node name="Net Segment7" type="RigidBody2D" parent="Net/Right"]
@@ -348,7 +348,7 @@ position = Vector2(-3, 2.38419e-07)
 scale = Vector2(0.1, 0.1)
 node_a = NodePath("../../../Left/Net Segment2")
 node_b = NodePath("..")
-bias = 0.7
+bias = 0.9
 softness = 0.5
 
 [node name="PinJoint2D2" type="PinJoint2D" parent="Net/Middle Horizontal/Net Segment"]
@@ -356,7 +356,7 @@ position = Vector2(23.5, 0)
 scale = Vector2(0.1, 0.1)
 node_a = NodePath("../../../Right/Net Segment2")
 node_b = NodePath("..")
-bias = 0.7
+bias = 0.9
 softness = 0.5
 
 [node name="Net Segment2" type="RigidBody2D" parent="Net/Middle Horizontal"]
@@ -374,7 +374,7 @@ position = Vector2(-3, 2.38419e-07)
 scale = Vector2(0.1, 0.1)
 node_a = NodePath("../../../Left/Net Segment4")
 node_b = NodePath("..")
-bias = 0.7
+bias = 0.9
 softness = 0.5
 
 [node name="PinJoint2D2" type="PinJoint2D" parent="Net/Middle Horizontal/Net Segment2"]
@@ -382,7 +382,7 @@ position = Vector2(23.5, 0)
 scale = Vector2(0.1, 0.1)
 node_a = NodePath("..")
 node_b = NodePath("../../../Right/Net Segment4")
-bias = 0.7
+bias = 0.9
 softness = 0.5
 
 [node name="Net Segment3" type="RigidBody2D" parent="Net/Middle Horizontal"]
@@ -400,7 +400,7 @@ position = Vector2(-3, 2.38419e-07)
 scale = Vector2(0.1, 0.1)
 node_a = NodePath("../../../Left/Net Segment6")
 node_b = NodePath("..")
-bias = 0.7
+bias = 0.9
 softness = 0.5
 
 [node name="PinJoint2D2" type="PinJoint2D" parent="Net/Middle Horizontal/Net Segment3"]
@@ -408,7 +408,7 @@ position = Vector2(23.5, 0)
 scale = Vector2(0.1, 0.1)
 node_a = NodePath("../../../Right/Net Segment6")
 node_b = NodePath("..")
-bias = 0.7
+bias = 0.9
 softness = 0.5
 
 [node name="Vertical Middle Left" type="Node2D" parent="Net"]
@@ -419,7 +419,7 @@ position = Vector2(2, 0)
 scale = Vector2(0.1, 0.1)
 node_a = NodePath("../../..")
 node_b = NodePath("../Net Segment4")
-bias = 0.7
+bias = 0.9
 softness = 7.0
 
 [node name="PinJoint2D2" type="PinJoint2D" parent="Net/Vertical Middle Left"]
@@ -427,7 +427,7 @@ position = Vector2(2, 10)
 scale = Vector2(0.1, 0.1)
 node_a = NodePath("../Net Segment10")
 node_b = NodePath("../../Middle Horizontal/Net Segment3")
-bias = 0.7
+bias = 0.9
 softness = 7.0
 
 [node name="Net Segment4" type="RigidBody2D" parent="Net/Vertical Middle Left"]
@@ -444,7 +444,7 @@ position = Vector2(2, 3)
 scale = Vector2(0.11, 0.11)
 node_a = NodePath("..")
 node_b = NodePath("../../Net Segment5")
-bias = 0.7
+bias = 0.9
 softness = 7.0
 
 [node name="Net Segment5" type="RigidBody2D" parent="Net/Vertical Middle Left"]
@@ -462,7 +462,7 @@ position = Vector2(2, 3)
 scale = Vector2(0.1, 0.1)
 node_a = NodePath("..")
 node_b = NodePath("../../Net Segment6")
-bias = 0.7
+bias = 0.9
 softness = 7.0
 
 [node name="Net Segment6" type="RigidBody2D" parent="Net/Vertical Middle Left"]
@@ -480,7 +480,7 @@ position = Vector2(2, 3)
 scale = Vector2(0.1, 0.1)
 node_a = NodePath("..")
 node_b = NodePath("../../Net Segment7")
-bias = 0.7
+bias = 0.9
 softness = 7.0
 
 [node name="Net Segment7" type="RigidBody2D" parent="Net/Vertical Middle Left"]
@@ -498,7 +498,7 @@ position = Vector2(2, 3)
 scale = Vector2(0.1, 0.1)
 node_a = NodePath("..")
 node_b = NodePath("../../Net Segment8")
-bias = 0.7
+bias = 0.9
 softness = 7.0
 
 [node name="Net Segment8" type="RigidBody2D" parent="Net/Vertical Middle Left"]
@@ -516,7 +516,7 @@ position = Vector2(2, 3)
 scale = Vector2(0.1, 0.1)
 node_a = NodePath("..")
 node_b = NodePath("../../Net Segment9")
-bias = 0.7
+bias = 0.9
 softness = 7.0
 
 [node name="Net Segment9" type="RigidBody2D" parent="Net/Vertical Middle Left"]
@@ -534,7 +534,7 @@ position = Vector2(2, 3)
 scale = Vector2(0.1, 0.1)
 node_a = NodePath("..")
 node_b = NodePath("../../Net Segment10")
-bias = 0.7
+bias = 0.9
 softness = 7.0
 
 [node name="Net Segment10" type="RigidBody2D" parent="Net/Vertical Middle Left"]
@@ -555,7 +555,7 @@ position = Vector2(2, 0)
 scale = Vector2(0.1, 0.1)
 node_a = NodePath("../../..")
 node_b = NodePath("../Net Segment4")
-bias = 0.7
+bias = 0.9
 softness = 7.0
 
 [node name="PinJoint2D2" type="PinJoint2D" parent="Net/Vertical Middle Right"]
@@ -563,7 +563,7 @@ position = Vector2(2, 10)
 scale = Vector2(0.1, 0.1)
 node_a = NodePath("../Net Segment10")
 node_b = NodePath("../../Middle Horizontal/Net Segment3")
-bias = 0.7
+bias = 0.9
 softness = 7.0
 
 [node name="Net Segment4" type="RigidBody2D" parent="Net/Vertical Middle Right"]
@@ -580,7 +580,7 @@ position = Vector2(2, 3)
 scale = Vector2(0.11, 0.11)
 node_a = NodePath("..")
 node_b = NodePath("../../Net Segment5")
-bias = 0.7
+bias = 0.9
 softness = 7.0
 
 [node name="Net Segment5" type="RigidBody2D" parent="Net/Vertical Middle Right"]
@@ -598,7 +598,7 @@ position = Vector2(2, 3)
 scale = Vector2(0.1, 0.1)
 node_a = NodePath("..")
 node_b = NodePath("../../Net Segment6")
-bias = 0.7
+bias = 0.9
 softness = 7.0
 
 [node name="Net Segment6" type="RigidBody2D" parent="Net/Vertical Middle Right"]
@@ -616,7 +616,7 @@ position = Vector2(2, 3)
 scale = Vector2(0.1, 0.1)
 node_a = NodePath("..")
 node_b = NodePath("../../Net Segment7")
-bias = 0.7
+bias = 0.9
 softness = 7.0
 
 [node name="Net Segment7" type="RigidBody2D" parent="Net/Vertical Middle Right"]
@@ -634,7 +634,7 @@ position = Vector2(2, 3)
 scale = Vector2(0.1, 0.1)
 node_a = NodePath("..")
 node_b = NodePath("../../Net Segment8")
-bias = 0.7
+bias = 0.9
 softness = 7.0
 
 [node name="Net Segment8" type="RigidBody2D" parent="Net/Vertical Middle Right"]
@@ -652,7 +652,7 @@ position = Vector2(2, 3)
 scale = Vector2(0.1, 0.1)
 node_a = NodePath("..")
 node_b = NodePath("../../Net Segment9")
-bias = 0.7
+bias = 0.9
 softness = 7.0
 
 [node name="Net Segment9" type="RigidBody2D" parent="Net/Vertical Middle Right"]
@@ -670,7 +670,7 @@ position = Vector2(2, 3)
 scale = Vector2(0.1, 0.1)
 node_a = NodePath("..")
 node_b = NodePath("../../Net Segment10")
-bias = 0.7
+bias = 0.9
 softness = 7.0
 
 [node name="Net Segment10" type="RigidBody2D" parent="Net/Vertical Middle Right"]
@@ -685,7 +685,7 @@ default_color = Color(0.529067, 0.529067, 0.529067, 1)
 
 [node name="Line2D" type="Line2D" parent="."]
 position = Vector2(-15, 0)
-points = PackedVector2Array(0, 0, 7.69055, 0, 30, 0)
+points = PackedVector2Array(-2, 0, 32, 0)
 width = 3.0
 default_color = Color(1, 0.129412, 0.219608, 1)
 
@@ -696,11 +696,11 @@ position = Vector2(15, 6.5)
 shape = SubResource("RectangleShape2D_vu7yg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-13.5, 0)
+position = Vector2(-15.5, 0)
 shape = SubResource("RectangleShape2D_mlwnm")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
-position = Vector2(13.5, 0)
+position = Vector2(15.5, 0)
 shape = SubResource("RectangleShape2D_mlwnm")
 
 [node name="ScoreSfx" type="AudioStreamPlayer2D" parent="."]
