@@ -57,7 +57,7 @@ theme_override_font_sizes/font_size = 16
 [node name="Score" type="Label" parent="."]
 texture_filter = 1
 offset_left = 199.0
-offset_right = 227.0
+offset_right = 213.0
 offset_bottom = 32.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_bny33")
@@ -66,17 +66,46 @@ text = "0"
 
 [node name="Credits" type="Label" parent="."]
 texture_filter = 1
-offset_left = 252.0
-offset_top = 201.0
-offset_right = 420.0
-offset_bottom = 236.0
+offset_left = 5.0
+offset_top = 204.0
+offset_right = 166.0
+offset_bottom = 220.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_bny33")
 theme_override_font_sizes/font_size = 16
-text = "A game developed by JoL _UnderlineStudios"
-horizontal_alignment = 2
-vertical_alignment = 1
-autowrap_mode = 2
+text = "A game developed by JoL"
+
+[node name="ItchIo" type="LinkButton" parent="Credits"]
+texture_filter = 1
+layout_mode = 0
+offset_left = -1.0
+offset_top = 16.0
+offset_right = 48.0
+offset_bottom = 32.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.439216, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 0.439216, 0, 1)
+theme_override_fonts/font = ExtResource("3_bny33")
+theme_override_font_sizes/font_size = 16
+text = "Itch.io"
+underline = 1
+uri = "https://jol-tm.itch.io/"
+
+[node name="GitHub" type="LinkButton" parent="Credits"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 56.0
+offset_top = 16.0
+offset_right = 98.0
+offset_bottom = 32.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.439216, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 0.439216, 0, 1)
+theme_override_fonts/font = ExtResource("3_bny33")
+theme_override_font_sizes/font_size = 16
+text = "GitHub"
+underline = 1
+uri = "https://github.com/jol-tm/"
 
 [node name="PlayBtn" type="Button" parent="."]
 texture_filter = 1

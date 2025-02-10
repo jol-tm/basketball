@@ -4,7 +4,7 @@ var vw : Vector2
 var score : int = 0
 
 func _ready() -> void:
-	vw = get_viewport().size
+	vw = get_viewport().get_visible_rect().size
 
 func change_position() -> void:
 	var tween : Tween = create_tween().set_trans(Tween.TRANS_CUBIC)
